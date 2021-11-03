@@ -26,7 +26,7 @@ class CreateBitfinexLiveTickersTable extends Migration
             $table->float('high', 15, 8);
             $table->float('low', 15, 8);
             $table->string('currency_pair');
-            $table->string('timestamp');
+            $table->bigInteger('timestamp');
             $table->timestamps();
         });
     }

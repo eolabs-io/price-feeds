@@ -6,7 +6,7 @@ use EolabsIo\PriceFeeds\Domain\Bitfinex\LiveTicker\LiveTickerWebSocket;
 
 class XlmUsdLiveTickerCommand extends Command
 {
-    protected $signature = 'Bitfinex:xlmusd-live-ticker';
+    protected $signature = 'bitfinex:xlmusd-live-ticker';
 
     protected $description = 'Subscribes to the Bitfinex XLM/USD price feed.';
 

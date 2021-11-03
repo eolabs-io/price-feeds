@@ -3,14 +3,11 @@
 namespace EolabsIo\PriceFeeds\Tests\Feature\Kraken;
 
 use EolabsIo\PriceFeeds\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use EolabsIo\PriceFeeds\Domain\Kraken\LiveTicker\Models\LiveTicker;
 use EolabsIo\PriceFeeds\Domain\Kraken\LiveTicker\Jobs\ProcessLiveTickerResponse;
 
 class ProcessLiveTickerResponseTest extends TestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();

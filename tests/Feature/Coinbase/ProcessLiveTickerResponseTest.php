@@ -3,14 +3,11 @@
 namespace EolabsIo\PriceFeeds\Tests\Feature\Coinbase;
 
 use EolabsIo\PriceFeeds\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use EolabsIo\PriceFeeds\Domain\Coinbase\LiveTicker\Models\LiveTicker;
 use EolabsIo\PriceFeeds\Domain\Coinbase\LiveTicker\Jobs\ProcessLiveTickerResponse;
 
 class ProcessLiveTickerResponseTest extends TestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();

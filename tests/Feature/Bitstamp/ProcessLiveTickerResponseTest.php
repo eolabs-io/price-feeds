@@ -3,14 +3,11 @@
 namespace EolabsIo\PriceFeeds\Tests\Feature\Bitstamp;
 
 use EolabsIo\PriceFeeds\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use EolabsIo\PriceFeeds\Domain\Bitstamp\LiveTicker\Models\LiveTicker;
 use EolabsIo\PriceFeeds\Domain\Bitstamp\LiveTicker\Jobs\ProcessLiveTickerResponse;
 
 class ProcessLiveTickerResponseTest extends TestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();

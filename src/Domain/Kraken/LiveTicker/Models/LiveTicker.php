@@ -5,10 +5,12 @@ namespace EolabsIo\PriceFeeds\Domain\Kraken\LiveTicker\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use EolabsIo\PriceFeeds\Database\Factories\Kraken\LiveTickerFactory;
+use EolabsIo\PriceFeeds\Domain\Kraken\LiveTicker\Concerns\LiveTickerSummarizable;
 
 class LiveTicker extends Model
 {
-    use HasFactory;
+    use HasFactory,
+        LiveTickerSummarizable;
 
     /**
      * The table associated with the model.

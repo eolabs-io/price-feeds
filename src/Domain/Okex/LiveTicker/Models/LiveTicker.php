@@ -5,10 +5,12 @@ namespace EolabsIo\PriceFeeds\Domain\Okex\LiveTicker\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use EolabsIo\PriceFeeds\Database\Factories\Okex\LiveTickerFactory;
+use EolabsIo\PriceFeeds\Domain\Okex\LiveTicker\Concerns\LiveTickerSummarizable;
 
 class LiveTicker extends Model
 {
-    use HasFactory;
+    use HasFactory,
+        LiveTickerSummarizable;
 
     /**
      * The table associated with the model.

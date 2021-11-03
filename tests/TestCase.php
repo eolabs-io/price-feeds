@@ -22,7 +22,7 @@ abstract class TestCase extends Orchestra
      */
     protected function getEnvironmentSetUp($app)
     {
-        $default = 'testbench'; // 'mysql';
+        $default = (true) ? 'mysql' : 'testbench';
 
         $app['config']->set('database.default', $default);
 
@@ -34,16 +34,16 @@ abstract class TestCase extends Orchestra
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ]);
 
-        // $app['config']->set('database.connections.mysql', [
-        //     'driver' => 'mysql',
-        //     'url' => env('DATABASE_URL'),
-        //     'host' => env('DB_HOST', '127.0.0.1'),
-        //     'port' => env('DB_PORT', '3306'),
-        //     'database' => 'LiftedNaturalsWalmartMPTest',
-        //     'username' => env('DB_USERNAME', 'forge'),
-        //     'password' => env('DB_PASSWORD', ''),
-        //     'unix_socket' => env('DB_SOCKET', ''),
-        // ]);
+        $app['config']->set('database.connections.mysql', [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+        ]);
     }
 
     /**

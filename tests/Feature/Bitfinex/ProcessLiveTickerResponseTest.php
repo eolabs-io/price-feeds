@@ -3,14 +3,11 @@
 namespace EolabsIo\PriceFeeds\Tests\Feature\Bitfinex;
 
 use EolabsIo\PriceFeeds\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use EolabsIo\PriceFeeds\Domain\Bitfinex\LiveTicker\Models\LiveTicker;
 use EolabsIo\PriceFeeds\Domain\Bitfinex\LiveTicker\Jobs\ProcessLiveTickerResponse;
 
 class ProcessLiveTickerResponseTest extends TestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();

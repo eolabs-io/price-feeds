@@ -22,7 +22,7 @@ class LiveTickerFactory extends Factory
     public function definition()
     {
         $price = $this->faker->randomFloat(8, 0.25, 46743.27); //BTC on 2021.09.14
-        $amount = $this->faker->randomNumber(8);
+        $amount = $this->faker->randomFloat(8, 0, 50000);
         $timestamp = $this->faker->dateTime()->getTimestamp();
 
         return [
@@ -37,10 +37,10 @@ class LiveTickerFactory extends Factory
             'open_24h' => $price,
             'high_24h' => $price,
             'low_24h' => $price,
-            'sod_utc_0' => $this->faker->randomFloat(5),
-            'sod_utc_8' => $this->faker->randomFloat(5),
-            'vol_ccy_24h' => $this->faker->randomFloat(5),
-            'vol_24h' => $this->faker->randomFloat(5),
+            'sod_utc_0' => $this->faker->randomFloat(8, 0, 50000),
+            'sod_utc_8' => $this->faker->randomFloat(8, 0, 50000),
+            'vol_ccy_24h' => $this->faker->randomFloat(8, 0, 50000),
+            'vol_24h' => $this->faker->randomFloat(8, 0, 50000),
             'ts' => $timestamp,
         ];
     }

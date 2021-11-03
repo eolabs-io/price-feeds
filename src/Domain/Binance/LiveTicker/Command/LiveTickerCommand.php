@@ -10,7 +10,7 @@ class LiveTickerCommand extends Command
     protected $signature = 'binance:live-ticker
                             {currency-pairs* : The currency pair to subscribe to i.e. xrpusdt, ltcusdt, etc}';
 
-    protected $description = 'Subscribes to the coinsbase price feed.';
+    protected $description = 'Subscribes to the binance price feed.';
 
 
     public function handle()

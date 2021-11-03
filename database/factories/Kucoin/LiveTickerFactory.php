@@ -23,7 +23,7 @@ class LiveTickerFactory extends Factory
     {
         $price = $this->faker->randomFloat(8, 0.25, 46743.27); //BTC on 2021.09.14
         $amount = $this->faker->randomNumber(8);
-        $timestamp = now()->toIso8601ZuluString();
+        $timestamp = now()->getTimestampMs();
 
         return [
             'best_ask' => $this->faker->randomNumber(5),

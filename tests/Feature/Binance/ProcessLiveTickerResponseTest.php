@@ -3,14 +3,11 @@
 namespace EolabsIo\PriceFeeds\Tests\Feature\Binance;
 
 use EolabsIo\PriceFeeds\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use EolabsIo\PriceFeeds\Domain\Binance\LiveTicker\Models\LiveTicker;
 use EolabsIo\PriceFeeds\Domain\Binance\LiveTicker\Jobs\ProcessLiveTickerResponse;
 
 class ProcessLiveTickerResponseTest extends TestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();

@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-ray` will be documented in this file
 
+## 1.26.1 - 2021-10-01
+
+- fix #217 error with duplicate queries log (#220)
+
+## 1.26.0 - 2021-09-27
+
+- feature duplicate queries (#216)
+
 ## 1.25.2 - 2021-09-10
 
 - enhance metadata instead of overriding it in when sending a request (#215)

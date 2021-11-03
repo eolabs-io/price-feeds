@@ -22,7 +22,7 @@ class LiveTickerFactory extends Factory
     public function definition()
     {
         $price = $this->faker->randomFloat(8, 0.25, 46743.27); //BTC on 2021.09.14
-        $amount = $this->faker->randomNumber(8);
+        $amount = $this->faker->randomNumber(7);
         $timestamp = $this->faker->dateTime()->getTimestamp();
 
         return [

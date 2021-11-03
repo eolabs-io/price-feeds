@@ -3,14 +3,12 @@
 namespace EolabsIo\PriceFeeds\Tests\Feature\Okex;
 
 use EolabsIo\PriceFeeds\Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+
 use EolabsIo\PriceFeeds\Domain\Okex\LiveTicker\Models\LiveTicker;
 use EolabsIo\PriceFeeds\Domain\Okex\LiveTicker\Jobs\ProcessLiveTickerResponse;
 
 class ProcessLiveTickerResponseTest extends TestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();

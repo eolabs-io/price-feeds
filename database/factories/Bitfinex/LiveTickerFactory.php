@@ -24,16 +24,16 @@ class LiveTickerFactory extends Factory
         $timestamp = $this->faker->dateTime()->getTimestamp();
 
         return [
-            'bid' => $this->faker->randomFloat(5),
-            'bid_size' => $this->faker->randomFloat(5),
-            'ask' => $this->faker->randomFloat(5),
-            'ask_size' => $this->faker->randomFloat(5),
-            'daily_change' => $this->faker->randomFloat(5),
-            'daily_change_relative' => $this->faker->randomFloat(5),
-            'last_price' => $this->faker->randomFloat(5),
-            'volume' => $this->faker->randomFloat(5),
-            'high' => $this->faker->randomFloat(5),
-            'low' => $this->faker->randomFloat(5),
+            'bid' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'bid_size' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'ask' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'ask_size' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'daily_change' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'daily_change_relative' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'last_price' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'volume' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'high' => $this->faker->randomFloat(8, 0.25, 46743.27),
+            'low' => $this->faker->randomFloat(8, 0.25, 46743.27),
             'currency_pair' => $this->faker->randomElement(['XRPUSD', 'BTCUSD']),
             'timestamp' => $timestamp,
         ];
